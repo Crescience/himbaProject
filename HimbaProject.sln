@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HimbaProject", "Assembly-CSharp.csproj", "{1ED17F46-7BD7-67FF-03A1-DBAF6A14F87F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HimbaProject", "Assembly-CSharp-Editor.csproj", "{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1ED17F46-7BD7-67FF-03A1-DBAF6A14F87F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED17F46-7BD7-67FF-03A1-DBAF6A14F87F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED17F46-7BD7-67FF-03A1-DBAF6A14F87F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED17F46-7BD7-67FF-03A1-DBAF6A14F87F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

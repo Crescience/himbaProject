@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="powerbank" size="50.000000 76.470589" />
+    <ImageTarget name="himba_red" size="500.000000 165.557404" />
+    <ImageTarget name="nujoma" size="500.000000 757.707764" />
+    <ImageTarget name="himba_black_1" size="0.700000 0.407014" />
+    <ImageTarget name="himba_circles" size="0.700000 0.273284" />
+    <ImageTarget name="himba_basic" size="1.000000 3.497436" />
+    <CylinderTarget name="example_cylinder" sideLength="2.000000"/>
+  </Tracking>
+</QCARConfig>
