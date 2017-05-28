@@ -56,6 +56,7 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\himba-db_OT.xml" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\readme_SDK.txt" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
@@ -68,10 +69,8 @@
      <None Include="Assets\StreamingAssets\QCAR\himba-db.xml" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+     <None Include="Assets\Editor\QCAR\TargetsetData\himba-db_info.xml" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
- <Reference Include="Assembly-UnityScript-Editor-firstpass">
- <HintPath>C:/Users/Asus/Documents/UnityHimbaProject/HimbaProject/Library/ScriptAssemblies/Assembly-UnityScript-Editor-firstpass.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/Programs/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -151,6 +150,8 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{1ED17F46-7BD7-67FF-03A1-DBAF6A14F87F}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript-Editor-firstpass.unityproj">
+      <Project>{D0148869-37C3-6D14-C93F-C7C63BA570F9}</Project>      <Name>Assembly-UnityScript-Editor-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
+  <TargetSet version="5.0" toolVersion="4.2.0">
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-27 15:20:58" name="red_good" targetId="002afc5c10864051bc9391c93efcb24b" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-27 20:33:49" name="black_thick_good" targetId="7eda03291071435a941864076cf64d7b" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-27 21:30:02" name="balls_good" targetId="cfd0ff807e044e638ad236765a9276f9" version="2.0" />
+  </TargetSet>
+</QCARInfo>

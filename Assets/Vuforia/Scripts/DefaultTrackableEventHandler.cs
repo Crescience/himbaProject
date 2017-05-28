@@ -71,6 +71,10 @@ namespace Vuforia
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
+			// added by matti
+			//createButton();
+			//GUI.Button (new Rect (0, 0, 100, 50), "A button");
+
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
             {
@@ -85,7 +89,7 @@ namespace Vuforia
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
-
+			
 
         private void OnTrackingLost()
         {

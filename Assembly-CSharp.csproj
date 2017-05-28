@@ -46,7 +46,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ButtonPopUp.cs" />
      <Compile Include="Assets\CameraFocusController.cs" />
+     <Compile Include="Assets\Guis.cs" />
+     <Compile Include="Assets\NewBehaviourScript.cs" />
      <Compile Include="Assets\ToonBot\ToonBot(Free) Assets\Controller\RobotTestScriptFree.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
@@ -88,6 +91,7 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\himba-db_OT.xml" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
      <None Include="Assets\readme_SDK.txt" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
@@ -100,6 +104,7 @@
      <None Include="Assets\StreamingAssets\QCAR\himba-db.xml" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+     <None Include="Assets\Editor\QCAR\TargetsetData\himba-db_info.xml" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Programs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HimbaProject", "Assembly-CS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HimbaProject", "Assembly-CSharp-Editor.csproj", "{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}"
 EndProject
+Project("{6637E4EB-FAC3-0AE1-0A0A-10255107A8F7}") = "HimbaProject", "Assembly-UnityScript-Editor-firstpass.unityproj", "{D0148869-37C3-6D14-C93F-C7C63BA570F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD2BB909-0C8C-813D-9EB6-393CF7B0D556}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0148869-37C3-6D14-C93F-C7C63BA570F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0148869-37C3-6D14-C93F-C7C63BA570F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0148869-37C3-6D14-C93F-C7C63BA570F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0148869-37C3-6D14-C93F-C7C63BA570F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
