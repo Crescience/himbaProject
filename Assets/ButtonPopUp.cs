@@ -9,7 +9,7 @@ namespace Vuforia {
 
 		private TrackableBehaviour mTrackableBehaviour;
 		private bool mShowGUIButton = false;
-		private Rect mButtonRect = new Rect (0, 0, 100, 50);
+		//private Rect mButtonRect = new Rect (0, 0, 100, 50);
 		private string buttonText = "BUTTON";
 		private AudioSource audioComp;
 		public AudioClip audioClipSound;
@@ -57,11 +57,15 @@ namespace Vuforia {
 				component.enabled = true;
 			}
 
-			mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource> ().Play ();
+			// check that there is an AudioSource
+			if (!mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>() != null) {
+				// check if the AudioSource is playing
+				if (!mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>().isPlaying) {
+					// play the audio
+					mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource> ().Play ();
+				}
+			}
 
-			//audioComp.Play ();
-			//GetComponentInChildren<AudioSource> ().Play ();
-			//GetComponent < AudioSource> ().Play ();
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
 		}
 
@@ -87,6 +91,11 @@ namespace Vuforia {
 		}
 
 		void OnGUI() {
+			int buttonWidth = Screen.width / 3;
+			int buttonHeight = Screen.height / 10;
+			int x = (Screen.width / 2) - (buttonWidth / 2);
+			int y = Screen.height - buttonHeight;
+			Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
 			if (mShowGUIButton) {
 				GUI.Button (mButtonRect, buttonText);
 			}
