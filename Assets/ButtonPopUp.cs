@@ -9,18 +9,44 @@ namespace Vuforia {
 
 		private TrackableBehaviour mTrackableBehaviour;
 		private bool mShowGUIButton = false;
+		private bool isRendered = false;
 		//private Rect mButtonRect = new Rect (0, 0, 100, 50);
 		private string buttonText = "BUTTON";
 		private AudioSource audioComp;
 		public AudioClip audioClipSound;
 
+		// vars for animations
+		private GameObject AfricanCow_VeryDarkBrown;
+		private float RotateSpeed = 5f;
+		private float Radius = 0.1f;
+		private Vector2 _centre;
+		private float _angle;
+
+
 		void Start()
 		{
+			//_centre = AfricanCow_VeryDarkBrown.transform.position;
+			//AfricanCow_VeryDarkBrown = GameObject.Find ("AfricanCow_VeryDarkBrown");
+
 			mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 			if (mTrackableBehaviour)
 			{
 				mTrackableBehaviour.RegisterTrackableEventHandler(this);
 			}
+		}
+
+		void Update()
+		{
+			/* another try at looping around animations
+			_angle += RotateSpeed * Time.deltaTime;
+			var offset = new Vector2 (Mathf.Sin (_angle), Mathf.Cos (_angle)) * Radius;
+			transform.forward = _centre + offset; */
+
+			/* The cow just keeps going and going and going and going.....
+			if (isRendered) {
+				Debug.Log("Should start moving the COW!");
+				AfricanCow_VeryDarkBrown.transform.position += AfricanCow_VeryDarkBrown.transform.forward * 50.0f * Time.deltaTime;
+			} */
 		}
 
 		public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
@@ -40,9 +66,17 @@ namespace Vuforia {
 		private void OnTrackingFound()
 		{
 			// change boolean to true to show the button
+			isRendered = true;
 			mShowGUIButton = true;
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+			// code to enable animation
+			Animation[] animationComponents = GetComponentsInChildren<Animation>();
+
+			foreach (Animation component in animationComponents) {
+				component.Play ();
+			}
+
 
 			// Enable rendering:
 			foreach (Renderer component in rendererComponents)
@@ -58,7 +92,7 @@ namespace Vuforia {
 			}
 
 			// check that there is an AudioSource
-			if (!mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>() != null) {
+			if (mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>() != false) {
 				// check if the AudioSource is playing
 				if (!mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>().isPlaying) {
 					// play the audio
@@ -72,8 +106,11 @@ namespace Vuforia {
 
 		private void OnTrackingLost()
 		{
+			isRendered = false;
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
+			// code to enable animation
+			Animation[] animationComponents = GetComponentsInChildren<Animation>();
 
 			// Disable rendering:
 			foreach (Renderer component in rendererComponents)
@@ -86,6 +123,11 @@ namespace Vuforia {
 			{
 				component.enabled = false;
 			}
+
+			foreach (Animation component in animationComponents) {
+				component.Stop ();
+			}
+
 
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 		}
