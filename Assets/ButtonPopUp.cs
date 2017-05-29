@@ -91,11 +91,14 @@ namespace Vuforia {
 		}
 
 		void OnGUI() {
+			// calculate button width to be in the center
+			// with some reasonable height
 			int buttonWidth = Screen.width / 3;
 			int buttonHeight = Screen.height / 10;
 			int x = (Screen.width / 2) - (buttonWidth / 2);
 			int y = Screen.height - buttonHeight;
 			Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
+			// show the button
 			if (mShowGUIButton) {
 				GUI.Button (mButtonRect, buttonText);
 			}
