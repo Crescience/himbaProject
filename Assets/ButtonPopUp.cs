@@ -11,6 +11,8 @@ namespace Vuforia {
 		private bool mShowGUIButton = false;
 		private Rect mButtonRect = new Rect (0, 0, 100, 50);
 		private string buttonText = "BUTTON";
+		private AudioSource audioComp;
+		public AudioClip audioClipSound;
 
 		void Start()
 		{
@@ -37,6 +39,7 @@ namespace Vuforia {
 
 		private void OnTrackingFound()
 		{
+			// change boolean to true to show the button
 			mShowGUIButton = true;
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -45,6 +48,7 @@ namespace Vuforia {
 			foreach (Renderer component in rendererComponents)
 			{
 				component.enabled = true;
+
 			}
 
 			// Enable colliders:
@@ -53,6 +57,11 @@ namespace Vuforia {
 				component.enabled = true;
 			}
 
+			mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource> ().Play ();
+
+			//audioComp.Play ();
+			//GetComponentInChildren<AudioSource> ().Play ();
+			//GetComponent < AudioSource> ().Play ();
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
 		}
 
