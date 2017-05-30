@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/basic.unity
     guid: 55d387e8a8c986744a0b2f17b8c28615
+  - enabled: 1
+    path: Assets/MockScene.unity
+    guid: 06acea87825323d48898209284719f5b

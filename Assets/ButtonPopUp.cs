@@ -9,19 +9,20 @@ namespace Vuforia {
 
 		private TrackableBehaviour mTrackableBehaviour;
 		private bool mShowGUIButton = false;
-		//private Rect mButtonRect = new Rect (0, 0, 100, 50);
 		private string buttonText = "BUTTON";
 		private AudioSource audioComp;
 		public AudioClip audioClipSound;
 
 		private bool buttonRendered = false;
+		private bool objectRecognized = false;
 
 		// vars for animations
+		/*
 		private GameObject AfricanCow_VeryDarkBrown;
 		private float RotateSpeed = 5f;
 		private float Radius = 0.1f;
 		private Vector2 _centre;
-		private float _angle;
+		private float _angle; */
 
 
 		void Start()
@@ -66,6 +67,7 @@ namespace Vuforia {
 
 		private void OnTrackingFound()
 		{
+			objectRecognized = true;
 			// change boolean to true to show the button
 			mShowGUIButton = true;
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
@@ -125,7 +127,10 @@ namespace Vuforia {
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 		}
 
+		// handles rendering GUI objects & click events
 		void OnGUI() {
+			// renders button when an object is recognized
+			if (objectRecognized) {
 				// calculate button width to be in the center
 				// with some reasonable height
 				int buttonWidth = Screen.width / 3;
@@ -133,10 +138,17 @@ namespace Vuforia {
 				int x = (Screen.width / 2) - (buttonWidth / 2);
 				int y = Screen.height - buttonHeight;
 				Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
-				// show the button
+				// show the button & handle click events on it
 				if (GUI.Button (mButtonRect, buttonText)) {
 					Debug.Log("BUtton CLICKED!");
+					switchScene ();
 				}
+			}
+		}
+
+		// handles switching the scene based on the recognized object
+		void switchScene() {
+			SceneNavigator.Load ("MockScene", "armringID", 1);
 		}
 	}
 }
