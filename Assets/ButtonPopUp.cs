@@ -9,11 +9,12 @@ namespace Vuforia {
 
 		private TrackableBehaviour mTrackableBehaviour;
 		private bool mShowGUIButton = false;
-		private bool isRendered = false;
 		//private Rect mButtonRect = new Rect (0, 0, 100, 50);
 		private string buttonText = "BUTTON";
 		private AudioSource audioComp;
 		public AudioClip audioClipSound;
+
+		private bool buttonRendered = false;
 
 		// vars for animations
 		private GameObject AfricanCow_VeryDarkBrown;
@@ -66,7 +67,6 @@ namespace Vuforia {
 		private void OnTrackingFound()
 		{
 			// change boolean to true to show the button
-			isRendered = true;
 			mShowGUIButton = true;
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -76,8 +76,7 @@ namespace Vuforia {
 			foreach (Animation component in animationComponents) {
 				component.Play ();
 			}
-
-
+				
 			// Enable rendering:
 			foreach (Renderer component in rendererComponents)
 			{
@@ -91,14 +90,11 @@ namespace Vuforia {
 				component.enabled = true;
 			}
 
-			// check that there is an AudioSource
-			if (mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>() != false) {
 				// check if the AudioSource is playing
 				if (!mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>().isPlaying) {
 					// play the audio
 					mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource> ().Play ();
 				}
-			}
 
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
 		}
@@ -106,7 +102,6 @@ namespace Vuforia {
 
 		private void OnTrackingLost()
 		{
-			isRendered = false;
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			// code to enable animation
@@ -127,24 +122,21 @@ namespace Vuforia {
 			foreach (Animation component in animationComponents) {
 				component.Stop ();
 			}
-
-
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 		}
 
 		void OnGUI() {
-			// calculate button width to be in the center
-			// with some reasonable height
-			int buttonWidth = Screen.width / 3;
-			int buttonHeight = Screen.height / 10;
-			int x = (Screen.width / 2) - (buttonWidth / 2);
-			int y = Screen.height - buttonHeight;
-			Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
-			// show the button
-			if (mShowGUIButton) {
-				GUI.Button (mButtonRect, buttonText);
-			}
+				// calculate button width to be in the center
+				// with some reasonable height
+				int buttonWidth = Screen.width / 3;
+				int buttonHeight = Screen.height / 10;
+				int x = (Screen.width / 2) - (buttonWidth / 2);
+				int y = Screen.height - buttonHeight;
+				Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
+				// show the button
+				if (GUI.Button (mButtonRect, buttonText)) {
+					Debug.Log("BUtton CLICKED!");
+				}
 		}
-
 	}
 }
