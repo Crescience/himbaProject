@@ -20,6 +20,7 @@ public class AudioPlayer : MonoBehaviour {
 			audioSource.Play ();
 		} else {
 			audioSource.Stop ();
-		}
+		} 
+		Debug.Log ("Audioclip selected");
 	}
 }

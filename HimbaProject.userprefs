@@ -2,8 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ButtonPopUp.cs">
     <Files>
-      <File FileName="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" Line="113" Column="1" />
-      <File FileName="Assets\ButtonPopUp.cs" Line="125" Column="4" />
+      <File FileName="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" Line="71" Column="77" />
+      <File FileName="Assets\ButtonPopUp.cs" Line="226" Column="43" />
+      <File FileName="Assets\Scripts\MenuScript.cs" Line="10" Column="33" />
+      <File FileName="Assets\Scripts\SceneNavigator.cs" Line="10" Column="64" />
+      <File FileName="Assets\Scripts\ArmringDetailView.cs" Line="29" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

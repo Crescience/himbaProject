@@ -212,6 +212,10 @@ namespace Vuforia {
 				int buttonHeight = Screen.height / 10;
 				int x = (Screen.width / 2) - (buttonWidth / 2);
 				int y = Screen.height - buttonHeight;
+
+				GUIStyle customButton = new GUIStyle ("button");
+				customButton.fontSize = 40;
+
 				Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
 				// show the button & handle click events on it
 				if (GUI.Button (mButtonRect, buttonText)) {
