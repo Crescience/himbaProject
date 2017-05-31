@@ -6,7 +6,6 @@ namespace Vuforia {
 	
 
 	public class ButtonPopUp : MonoBehaviour, ITrackableEventHandler {
-
 		private TrackableBehaviour mTrackableBehaviour;
 		private bool mShowGUIButton = false;
 		private string buttonText = "BUTTON";
@@ -83,6 +82,8 @@ namespace Vuforia {
 			foreach (Renderer component in rendererComponents)
 			{
 				component.enabled = true;
+				StartCoroutine (ScaleOverTime (component, 15));
+				component.transform.localScale += new Vector3 (0.5f, 0.5f, 0.5f);
 
 			}
 
@@ -125,6 +126,21 @@ namespace Vuforia {
 				component.Stop ();
 			}
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+		}
+			
+
+		IEnumerator ScaleOverTime(Renderer component, int time) {
+			Vector3 originalScale = component.transform.localScale;
+			Vector3 originalPosition = component.transform.localPosition;
+			Vector3 destinationScale = new Vector3 (2f, 2f, 2f);
+			float currentTime = 0.0f;
+
+			do {
+				component.transform.localScale = Vector3.Lerp (originalScale, destinationScale, currentTime / time);
+				//component.transform.RotateAround (originalPosition, component.transform.position, 1000);
+				currentTime += Time.deltaTime;
+				yield return null;
+			} while (currentTime <= time);
 		}
 
 		// handles rendering GUI objects & click events
