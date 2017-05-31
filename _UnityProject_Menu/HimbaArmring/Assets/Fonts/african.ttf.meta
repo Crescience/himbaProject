@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: cdc71ff628948d54fb00fb1f8f763164
+timeCreated: 1495882477
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: African
+  fontNames:
+  - African
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
