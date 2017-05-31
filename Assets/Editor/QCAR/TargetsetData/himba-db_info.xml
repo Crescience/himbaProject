@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
   <TargetSet version="5.0" toolVersion="4.2.0">
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-30 09:41:25" name="dbl_flw_good" targetId="00e6aa8ceec940428069f81fadd2eb76" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-30 09:35:31" name="blk_patterns_good" targetId="bbb7a82d4d1c4353a386dbebd0da7603" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-30 09:59:40" name="triangles_good" targetId="3d0672707ae14bb8a4692e8b93ed0e61" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-29 21:42:56" name="flower_good" targetId="1fdcc51b41504a71a67d0c6ad3cbfec3" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-30 15:10:47" name="thick_black_new_good" targetId="45e89063990d445fb07e5bcc335fed79" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-30 15:13:28" name="balls_new" targetId="9a17f5ddd1ec4d14a846c518d0276057" version="2.0" />
+    <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-30 09:41:25" name="double_flower_new_good" targetId="47cebfc23f4b4330a51c19eae2994ecb" version="2.0" />
     <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-27 15:20:58" name="red_good" targetId="002afc5c10864051bc9391c93efcb24b" version="2.0" />
     <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-27 20:33:49" name="black_thick_good" targetId="7eda03291071435a941864076cf64d7b" version="2.0" />
     <ObjectTarget bbox="0.0 0.0 0.0 142.5 95.0 95.0" captureAppVersion="1.0.0" lastSaved="2017-05-27 21:30:02" name="balls_good" targetId="cfd0ff807e044e638ad236765a9276f9" version="2.0" />
