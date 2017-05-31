@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour {
 
-
 	public void OnClick_Scan()
 	{
-		SceneManager.LoadScene ("ScanScene");
+		SceneManager.LoadScene ("basic");
 		Debug.Log("Clicked Scan-Button");
 	}
 
@@ -23,7 +22,7 @@ public class MenuScript : MonoBehaviour {
 	}
 
 	public void OnClick_GoToArmringDetailView(int pId) {
-		SceneNavigator.Load ("ArmringDetailView", "armringID", pId);
+		SceneNavigator.Load ("ArmringDetailView", "braceletID", pId);
 		Debug.Log("Clicked Back-Button");
 	}
 }

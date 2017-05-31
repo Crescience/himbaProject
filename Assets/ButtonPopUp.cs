@@ -223,7 +223,7 @@ namespace Vuforia {
 
 		// handles switching the scene based on the recognized object
 		void switchScene(int id) {
-			SceneNavigator.Load ("MockScene", "armringID", id);
+			SceneNavigator.Load ("ArmringDetailView", "braceletID", id);
 		}
 
 		// get bracelet ID based on trackable

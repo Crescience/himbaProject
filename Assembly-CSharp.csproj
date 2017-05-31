@@ -54,8 +54,13 @@
      <Compile Include="Assets\Oscillator.cs" />
      <Compile Include="Assets\Scripts\Armring3DViewer.cs" />
      <Compile Include="Assets\Scripts\ArmringDetailView.cs" />
+     <Compile Include="Assets\Scripts\AudioPlayer.cs" />
+     <Compile Include="Assets\Scripts\Bracelet.cs" />
+     <Compile Include="Assets\Scripts\BraceletDataStorage.cs" />
+     <Compile Include="Assets\Scripts\BraceletModelSelector.cs" />
      <Compile Include="Assets\Scripts\MenuScript.cs" />
      <Compile Include="Assets\Scripts\SceneNavigator.cs" />
+     <Compile Include="Assets\Scripts\ScrollViewNormalizer.cs" />
      <Compile Include="Assets\ToonBot\ToonBot(Free) Assets\Controller\RobotTestScriptFree.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
