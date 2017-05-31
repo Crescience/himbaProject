@@ -83,8 +83,6 @@ namespace Vuforia {
 			{
 				component.enabled = true;
 				StartCoroutine (ScaleOverTime (component, 15));
-				component.transform.localScale += new Vector3 (0.5f, 0.5f, 0.5f);
-
 			}
 
 			// Enable colliders:
@@ -136,8 +134,9 @@ namespace Vuforia {
 			float currentTime = 0.0f;
 
 			do {
-				component.transform.localScale = Vector3.Lerp (originalScale, destinationScale, currentTime / time);
+				//component.transform.localScale = Vector3.Lerp (originalScale, destinationScale, currentTime / time);
 				//component.transform.RotateAround (originalPosition, component.transform.position, 1000);
+				//component.transform.Rotate(0, 360, 0, Space.Self);
 				currentTime += Time.deltaTime;
 				yield return null;
 			} while (currentTime <= time);
