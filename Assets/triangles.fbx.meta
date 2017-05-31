@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: d7bd949b8cae7834d9c65dd6104f83b7
+timeCreated: 1496231089
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: IMG_2617
+    100002: IMG_2618
+    100004: IMG_2619
+    100006: IMG_2620
+    100008: IMG_2621
+    100010: IMG_2622
+    100012: IMG_2623
+    100014: IMG_2624
+    100016: IMG_2625
+    100018: IMG_2626
+    100020: IMG_2627
+    100022: IMG_2628
+    100024: IMG_2629
+    100026: IMG_2630
+    100028: IMG_2631
+    100030: IMG_2632
+    100032: IMG_2633
+    100034: IMG_2634
+    100036: IMG_2635
+    100038: IMG_2636
+    100040: IMG_2637
+    100042: IMG_2638
+    100044: IMG_2639
+    100046: IMG_2640
+    100048: IMG_2641
+    100050: IMG_2642
+    100052: IMG_2643
+    100054: IMG_2644
+    100056: IMG_2645
+    100058: IMG_2646
+    100060: IMG_2647
+    100062: IMG_2648
+    100064: IMG_2649
+    100066: IMG_2650
+    100068: IMG_2651
+    100070: IMG_2652
+    100072: IMG_2653
+    100074: IMG_2655
+    100076: IMG_2656
+    100078: IMG_2657
+    100080: IMG_2658
+    100082: IMG_2659
+    100084: IMG_2660
+    100086: IMG_2661
+    100088: IMG_2662
+    100090: IMG_2663
+    100092: IMG_2664
+    100094: IMG_2665
+    100096: IMG_2666
+    100098: IMG_2667
+    100100: IMG_2668
+    100102: IMG_2669
+    100104: mainMeshNode
+    100106: //RootNode
+    400000: IMG_2617
+    400002: IMG_2618
+    400004: IMG_2619
+    400006: IMG_2620
+    400008: IMG_2621
+    400010: IMG_2622
+    400012: IMG_2623
+    400014: IMG_2624
+    400016: IMG_2625
+    400018: IMG_2626
+    400020: IMG_2627
+    400022: IMG_2628
+    400024: IMG_2629
+    400026: IMG_2630
+    400028: IMG_2631
+    400030: IMG_2632
+    400032: IMG_2633
+    400034: IMG_2634
+    400036: IMG_2635
+    400038: IMG_2636
+    400040: IMG_2637
+    400042: IMG_2638
+    400044: IMG_2639
+    400046: IMG_2640
+    400048: IMG_2641
+    400050: IMG_2642
+    400052: IMG_2643
+    400054: IMG_2644
+    400056: IMG_2645
+    400058: IMG_2646
+    400060: IMG_2647
+    400062: IMG_2648
+    400064: IMG_2649
+    400066: IMG_2650
+    400068: IMG_2651
+    400070: IMG_2652
+    400072: IMG_2653
+    400074: IMG_2655
+    400076: IMG_2656
+    400078: IMG_2657
+    400080: IMG_2658
+    400082: IMG_2659
+    400084: IMG_2660
+    400086: IMG_2661
+    400088: IMG_2662
+    400090: IMG_2663
+    400092: IMG_2664
+    400094: IMG_2665
+    400096: IMG_2666
+    400098: IMG_2667
+    400100: IMG_2668
+    400102: IMG_2669
+    400104: mainMeshNode
+    400106: //RootNode
+    2300000: mainMeshNode
+    3300000: mainMeshNode
+    4300000: mainMeshNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

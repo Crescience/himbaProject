@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="QCAR_Dataset_config.xsd">
   <Tracking>
+    <ObjectTarget name="dbl_flw_good" />
+    <ObjectTarget name="blk_patterns_good" />
+    <ObjectTarget name="triangles_good" />
+    <ObjectTarget name="flower_good" />
     <ObjectTarget name="thick_black_new_good" />
     <ObjectTarget name="balls_new" />
     <ObjectTarget name="double_flower_new_good" />

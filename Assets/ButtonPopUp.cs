@@ -11,11 +11,12 @@ namespace Vuforia {
 		private string buttonText = "BUTTON";
 		private AudioSource audioComp;
 		public AudioClip audioClipSound;
-
 		private bool buttonRendered = false;
 		private bool objectRecognized = false;
 
 		// vars for animations
+		private Vector3 originalScale;
+
 		/*
 		private GameObject AfricanCow_VeryDarkBrown;
 		private float RotateSpeed = 5f;
@@ -66,6 +67,7 @@ namespace Vuforia {
 
 		private void OnTrackingFound()
 		{
+
 			objectRecognized = true;
 			// change boolean to true to show the button
 			mShowGUIButton = true;
@@ -81,8 +83,20 @@ namespace Vuforia {
 			// Enable rendering:
 			foreach (Renderer component in rendererComponents)
 			{
+				//Debug.Log("Renderer " + component.name + " found");
 				component.enabled = true;
-				StartCoroutine (ScaleOverTime (component, 15));
+				if (component.name == "Tree 4") {
+					StartCoroutine (ScaleOverTime (component, 5));	
+				} else if (component.name == "AfricanCow_VeryDarkBrown") {
+					StartCoroutine (ScaleOverTime (component, 5));
+				}
+				else if (mTrackableBehaviour.transform.GetChild(0).name == "HimbaLadyContainer") {
+					StartCoroutine (RotateOverTime (GameObject.Find("HimbaLadyContainer"), 5));
+					Debug.Log("Game object is " + component.gameObject.name + " lost");
+				} 
+					
+				//component.transform.localScale += new Vector3 (0.5f, 0.5f, 0.5f);
+
 			}
 
 			// Enable colliders:
@@ -90,7 +104,7 @@ namespace Vuforia {
 			{
 				component.enabled = true;
 			}
-
+				
 				// check if the AudioSource is playing
 				if (!mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>().isPlaying) {
 					// play the audio
@@ -103,6 +117,7 @@ namespace Vuforia {
 
 		private void OnTrackingLost()
 		{
+			objectRecognized = false;
 			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
 			Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			// code to enable animation
@@ -112,6 +127,9 @@ namespace Vuforia {
 			foreach (Renderer component in rendererComponents)
 			{
 				component.enabled = false;
+				if (component.name == "Tree 4") {
+					component.transform.localScale = originalScale;
+				}
 			}
 
 			// Disable colliders:
@@ -125,16 +143,42 @@ namespace Vuforia {
 			}
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
 		}
+
+
+
+		IEnumerator RotateAroundOverTime(GameObject gameObject, int time) {
+			float currentTime = 0.0f;
+			do {
+				gameObject.transform.RotateAround(gameObject.transform.position, gameObject.transform.up, Time.deltaTime * 90f);
+				currentTime += Time.deltaTime;
+				yield return null;
+			} while (objectRecognized);
+		}
+
+
+
+	
+		IEnumerator RotateOverTime(GameObject gameObject, int time) {
+			Debug.Log("Rotate over time called!");
+			float currentTime = 0.0f;
+			do {
+				gameObject.transform.Rotate(Vector3.up * Time.deltaTime);
+				currentTime += Time.deltaTime;
+				yield return null;
+			} while (objectRecognized);
+		}
+
 			
 
+		// handles scaling the renderer that was passed as a parameter to given scale
 		IEnumerator ScaleOverTime(Renderer component, int time) {
-			Vector3 originalScale = component.transform.localScale;
+			Debug.Log("ScaleOverTime called!");
+			originalScale = component.transform.localScale;
 			Vector3 originalPosition = component.transform.localPosition;
-			Vector3 destinationScale = new Vector3 (2f, 2f, 2f);
+			Vector3 destinationScale = new Vector3 (0.04f, 0.04f, 0.04f);
 			float currentTime = 0.0f;
-
 			do {
-				//component.transform.localScale = Vector3.Lerp (originalScale, destinationScale, currentTime / time);
+				component.transform.localScale = Vector3.Lerp (originalScale, destinationScale, currentTime / time);
 				//component.transform.RotateAround (originalPosition, component.transform.position, 1000);
 				//component.transform.Rotate(0, 360, 0, Space.Self);
 				currentTime += Time.deltaTime;
@@ -142,6 +186,19 @@ namespace Vuforia {
 			} while (currentTime <= time);
 		}
 
+		IEnumerator ScaleGameObjectOvertime(GameObject gameObject, int time) {
+			originalScale = gameObject.transform.localScale;
+			Vector3 originalPosition = gameObject.transform.localPosition;
+			Vector3 destinationScale = new Vector3 (0.08f, 0.08f, 0.08f);
+			float currentTime = 0.0f;
+			do {
+				gameObject.transform.localScale = Vector3.Lerp (originalScale, destinationScale, currentTime / time);
+				currentTime += Time.deltaTime;
+				yield return null;
+			} while (currentTime <= time);
+		}
+
+			
 		// handles rendering GUI objects & click events
 		void OnGUI() {
 			// renders button when an object is recognized
