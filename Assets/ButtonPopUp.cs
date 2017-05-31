@@ -67,6 +67,7 @@ namespace Vuforia {
 
 		private void OnTrackingFound()
 		{
+			Debug.Log("TRACKABLE IS " + mTrackableBehaviour.name);
 
 			objectRecognized = true;
 			// change boolean to true to show the button
@@ -92,7 +93,7 @@ namespace Vuforia {
 				}
 				else if (mTrackableBehaviour.transform.GetChild(0).name == "HimbaLadyContainer") {
 					StartCoroutine (RotateOverTime (GameObject.Find("HimbaLadyContainer"), 5));
-					Debug.Log("Game object is " + component.gameObject.name + " lost");
+					//Debug.Log("Game object is " + component.gameObject.name + " lost");
 				} 
 					
 				//component.transform.localScale += new Vector3 (0.5f, 0.5f, 0.5f);
@@ -105,11 +106,13 @@ namespace Vuforia {
 				component.enabled = true;
 			}
 				
+			if (mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>() != null) {
 				// check if the AudioSource is playing
 				if (!mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource>().isPlaying) {
 					// play the audio
 					mTrackableBehaviour.gameObject.GetComponentInChildren<AudioSource> ().Play ();
 				}
+			}
 
 			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
 		}
@@ -159,7 +162,7 @@ namespace Vuforia {
 
 	
 		IEnumerator RotateOverTime(GameObject gameObject, int time) {
-			Debug.Log("Rotate over time called!");
+			// Debug.Log("Rotate over time called!");
 			float currentTime = 0.0f;
 			do {
 				gameObject.transform.Rotate(Vector3.up * Time.deltaTime);
@@ -212,15 +215,38 @@ namespace Vuforia {
 				Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
 				// show the button & handle click events on it
 				if (GUI.Button (mButtonRect, buttonText)) {
-					Debug.Log("BUtton CLICKED!");
-					switchScene ();
+					//Debug.Log("BUtton CLICKED! " + selectBraceletId(mTrackableBehaviour.TrackableName));
+					switchScene (selectBraceletId(mTrackableBehaviour.TrackableName));
 				}
 			}
 		}
 
 		// handles switching the scene based on the recognized object
-		void switchScene() {
-			SceneNavigator.Load ("MockScene", "armringID", 1);
+		void switchScene(int id) {
+			SceneNavigator.Load ("MockScene", "armringID", id);
+		}
+
+		// get bracelet ID based on trackable
+		int selectBraceletId(string trackableName) {
+			switch (trackableName) {
+			case "red_good" : 
+				return 2;
+			case "flower_good" :
+				return 1;
+			case "black_thick_good" :
+				return 3;
+			case "balls_new":
+				return 4;
+			case "blk_patterns_good":
+				return 5;
+			case "triangles_good":
+				return 6;
+			case "dbl_flw_good":
+				return 7;
+			default:
+				return 1;
+			}
+
 		}
 	}
 }
