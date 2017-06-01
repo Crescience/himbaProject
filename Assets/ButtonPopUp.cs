@@ -212,13 +212,13 @@ namespace Vuforia {
 				int buttonHeight = Screen.height / 10;
 				int x = (Screen.width / 2) - (buttonWidth / 2);
 				int y = Screen.height - buttonHeight;
-
-				GUIStyle customButton = new GUIStyle ("button");
-				customButton.fontSize = 40;
+				GUI.backgroundColor = Color.red;
+				GUIStyle buttonGuiStyle = new GUIStyle ("button");
+				buttonGuiStyle.fontSize = 40;
 
 				Rect mButtonRect = new Rect (x, y, buttonWidth, buttonHeight);
 				// show the button & handle click events on it
-				if (GUI.Button (mButtonRect, buttonText)) {
+				if (GUI.Button (mButtonRect, buttonText, buttonGuiStyle)) {
 					//Debug.Log("BUtton CLICKED! " + selectBraceletId(mTrackableBehaviour.TrackableName));
 					switchScene (selectBraceletId(mTrackableBehaviour.TrackableName));
 				}
