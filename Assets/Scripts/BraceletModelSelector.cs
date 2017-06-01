@@ -9,11 +9,13 @@ public class BraceletModelSelector : MonoBehaviour {
 
 	public void setActiveBraceletByID(int pId) {
 		for (int i = 0; i < bracelet3DModels.Length; i++) {
-			if (i + 1 == pId) {
-				bracelet3DModels [i].SetActive (true);
-			}
-			else {
-				bracelet3DModels [i].SetActive (false);
+			if (bracelet3DModels [i] != null) {
+				if (i + 1 == pId) {
+					bracelet3DModels [i].SetActive (true);
+				}
+				else {
+					bracelet3DModels [i].SetActive (false);
+				}
 			}
 		}
 	}

@@ -6,29 +6,36 @@ using UnityEngine.UI;
 public class ArmringDetailView : MonoBehaviour {
 
 	[SerializeField]
-	private Text armringDescription = null;
+	private Text mTextArmringDescription = null;
 
 	[SerializeField]
-	private AudioSource braceletAudioDescription = null;
+	private AudioPlayer mAudioPlayer = null;
 
 	[SerializeField]
-	private BraceletModelSelector braceletModelSelector = null;
+	private GameObject mBtnPlayAudio = null;
+
+	[SerializeField]
+	private BraceletModelSelector mBraceletModelSelector = null;
 
 	private int mBraceletID;
-	private Component scriptText;
 	private Bracelet mBracelet;
 
 	// Use this for initialization
 	void Start () {
-		
+
+		// Get BraceletID passed by calling scene
 		mBraceletID = SceneNavigator.getParam ("braceletID");
 		Debug.Log ("BraceletID = " + mBraceletID);
+
+		// Initializing objects for specified braceletID
 		mBracelet = new Bracelet (mBraceletID);
+		mTextArmringDescription.text = mBracelet.getDescription ();
+		mBraceletModelSelector.setActiveBraceletByID (mBraceletID);
 
-		armringDescription.text = mBracelet.getDescription ();
-		braceletModelSelector.setActiveBraceletByID (mBraceletID);
-
-		((AudioPlayer)braceletAudioDescription.GetComponent<AudioPlayer> ()).setBraceletID(mBraceletID);
+		if (!mAudioPlayer.setBraceletID (mBraceletID)) {
+			// if the audioplayer could not set sucessfully for specified id -> disable the play audio button
+			mBtnPlayAudio.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame

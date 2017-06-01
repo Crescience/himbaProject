@@ -10,9 +10,17 @@ public class AudioPlayer : MonoBehaviour {
 	[SerializeField]
 	private AudioSource audioSource = null;
 
-	public void setBraceletID(int pId) {
-		audioSource.clip = audioClips [pId];
-		Debug.Log ("Audioclip selected");
+	public bool setBraceletID(int pId) {
+		if (audioClips [pId - 1] != null) {
+			audioSource.clip = audioClips [pId - 1];
+			if (audioSource == null) {
+				Debug.Log("Audioplayer: audiosource is null!");
+			}
+			Debug.Log ("Audioclip selected");
+			return true;
+		} else
+			return false;
+
 	}
 
 	public void onClick_AudioButton() {
@@ -20,7 +28,6 @@ public class AudioPlayer : MonoBehaviour {
 			audioSource.Play ();
 		} else {
 			audioSource.Stop ();
-		} 
-		Debug.Log ("Audioclip selected");
+		}
 	}
 }
