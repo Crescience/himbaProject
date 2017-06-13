@@ -87,7 +87,7 @@ namespace Vuforia {
 				//Debug.Log("Renderer " + component.name + " found");
 				component.enabled = true;
 				if (component.name == "Tree 4") {
-					StartCoroutine (ScaleOverTime (component, 5));	
+					StartCoroutine (ScaleOverTime (component, 2));	
 				} else if (component.name == "AfricanCow_VeryDarkBrown") {
 					StartCoroutine (ScaleOverTime (component, 5));
 				}

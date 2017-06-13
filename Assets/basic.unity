@@ -184,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 63648918}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.192, y: 0.023, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 712759029}
@@ -232,11 +232,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: m_Name
-      value: Object_double_flower
+      value: Object_big_flower
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mTrackableName
-      value: red_good
+      value: big_flower
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mInitializedInEditor
@@ -384,7 +384,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mTrackableName
-      value: flower_good
+      value: red_good
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mInitializedInEditor
@@ -440,7 +440,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: m_Name
-      value: Object_flower
+      value: Object_red
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: m_Enabled
@@ -475,7 +475,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 302236221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.555, y: 0.3630266, z: 0.22072203}
+  m_LocalPosition: {x: 0.449, y: 0.3630266, z: 0.22072203}
   m_LocalScale: {x: 0.0070175435, y: 0.0070175435, z: 0.0070175435}
   m_Children:
   - {fileID: 1781838303}
@@ -523,7 +523,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mTrackableName
-      value: triangles_good
+      value: thin_triangles
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mInitializedInEditor
@@ -579,7 +579,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: m_Name
-      value: Object_triangles
+      value: Object_thin_triangles
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: m_Enabled
@@ -718,7 +718,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mTrackableName
-      value: black_thick_good
+      value: thin_triangles
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mInitializedInEditor
@@ -1371,7 +1371,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1484603096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.127, y: 0, z: 0}
+  m_LocalPosition: {x: -0.127, y: 0.077, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1791210018}
@@ -1679,7 +1679,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mTrackableName
-      value: dbl_flw_good
+      value: chicken
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mInitializedInEditor
@@ -1739,7 +1739,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: m_Name
-      value: Object_red
+      value: Object_chicken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
@@ -1997,7 +1997,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mTrackableName
-      value: balls_new
+      value: fish
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: mInitializedInEditor
@@ -2057,7 +2057,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
       propertyPath: m_Name
-      value: Object_balls
+      value: Object_fish
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16d0ac561db0caa4ea75bedbc45526bc, type: 2}
@@ -2084,7 +2084,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2136516272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.113, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1098615687}
