@@ -233,15 +233,15 @@ namespace Vuforia {
 		// get bracelet ID based on trackable
 		int selectBraceletId(string trackableName) {
 			switch (trackableName) {
+			case "chicken" :
+				return 1;
 			case "red_good" : 
 				return 2;
-			case "flower_good" :
-				return 1;
-			case "black_thick_good" :
+			case "fish" :
 				return 3;
-			case "balls_new":
+			case "big_flower":
 				return 4;
-			case "blk_patterns_good":
+			case "thin_triangles":
 				return 5;
 			case "triangles_good":
 				return 6;

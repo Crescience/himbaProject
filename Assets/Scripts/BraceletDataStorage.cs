@@ -6,11 +6,11 @@ public static class BraceletDataStorage {
 
 	private static string[] mDescriptions = {
 		// Description for bracelet #1
-		"A traditional black powder is to colour the paces of the bracelet. This colour is usually found on clothes wearied by small kids until the age of 12 years old. Many more colours can be used on the bracelet relatively to their living fact or environment.",
+		"A traditional black powder is to colour the paces of the bracelet. This colour is usually found on clothes wearied by small kids until the age of 12 years old. The bracelet features an illustration of a guinea fowl.",
 		// Description for bracelet #2
 		"The bracelets are made from recycled PVC but horn of a cow is the preferable material for the Himba. They cut it into a cylinder form and which they then remove and clean the inside part of it.",
 		// Description for bracelet #3
-		"The creativity of bracelet pattern is significantly based on personal approach toward art and the vision on cows’ horns. And beautifying traditional Himba and Herero tribal art and jewellery. The bracelet honours the connection between the cattle and the himba people.",
+		"The creativity of bracelet pattern is significantly based on personal approach toward art and the vision on cows’ horns. And beautifying traditional Himba and Herero tribal art and jewellery. An carving of a fish is shown on the bracelet.",
 		// Description for bracelet #4
 		"The bracelet is a great from the combined cultures of Himba people and their surrounding environment. This bracelet interprets the magnificence namib desert’s waves with embedded flowers. The Namib desert captures the creativity of the himba.",
 		// Description for bracelet #5
